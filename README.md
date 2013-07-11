@@ -18,8 +18,11 @@ Or if using from the console, just install the gem:
 
     gem install 'edmunds_ruby'
 
+### Get Edmunds Vehicle API key:
 
-### You will need to create an account with Edmunds and get a free developer Vehicle API key
+You will need to create an account with Edmunds and get a free developer Vehicle API key from here:
+
+    http://developer.edmunds.com
 
 Once you get your API key, either create an initializer file to place it in OR add it to your .bashrc script
 
