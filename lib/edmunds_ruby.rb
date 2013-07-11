@@ -5,7 +5,6 @@ require 'edmunds_ruby/style_finders'
 require 'edmunds_ruby/image_finders'
 
 module EdmundsRuby
-
   class API
     include MakeFinders
     include ModelFinders
@@ -34,7 +33,5 @@ module EdmundsRuby
       @resp = RestClient.get(@base_url)
       @json = Crack::JSON.parse(@resp)
     end
-
   end
-
 end
