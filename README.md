@@ -18,6 +18,8 @@ Or if using from the console, just install the gem:
 
     gem install 'edmunds_ruby'
 
+Now add your API key
+
 ### Get Edmunds Vehicle API key:
 
 You will need to create an account with Edmunds and get a free developer Vehicle API key from here:
@@ -56,7 +58,7 @@ Save and close the file, then source the file to make the changes take effect:
 Now you can use the Vehicle API as you like.
 
 
-## Using:
+## Usage:
 
 To use the gem, open a console and start playing.
 There are currently 5 classes you can call: Make, Model, ModelYear, Style, and Photo
@@ -67,6 +69,12 @@ Some of the methods require inputs, others do not. Let's try an easy one first:
     m.find_all
 
 This should return a list of all vehicle makes in the system.
+
+For the Model class, you will have to provide an id first (which you can get from a Make response)
+
+    m = Edmunds::Model.new
+    m.find_by_id("Lamborghini_Diablo")
+
 
 More documentation on the way...
 
