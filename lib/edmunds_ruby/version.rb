@@ -1,0 +1,3 @@
+module EdmundsRuby
+  VERSION = "0.0.1"
+end
