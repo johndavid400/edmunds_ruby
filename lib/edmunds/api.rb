@@ -7,7 +7,7 @@ module Edmunds
     require 'crack'
     require 'crack/json'
 
-    attr_reader :data, :image, :images
+    attr_reader :base, :api_key, :image_base_url, :format, :base_url
 
     def initialize
       @base = "http://api.edmunds.com/v1/api/vehicle"

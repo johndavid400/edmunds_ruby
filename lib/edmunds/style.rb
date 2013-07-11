@@ -13,8 +13,8 @@ module Edmunds
       @json["styleHolder"]
     end
 
-    def find_style_by_id(model_year_id)
-      @url = "/stylerepository/findstylebymakemodelyearid?modelyearid=#{model_year_id}&"
+    def find_styles_by_model_year_id(model_year_id)
+      @url = "/stylerepository/findstylesbymodelyearid?modelyearid=#{model_year_id}&"
       call_api
       @json["styleHolder"]
     end

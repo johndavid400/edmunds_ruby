@@ -39,7 +39,7 @@ module Edmunds
     end
 
     def find_new_and_used
-      @url = "/makerepository/findnewandused"
+      @url = "/makerepository/findnewandused?"
       call_api
       @json["makeHolder"]
     end

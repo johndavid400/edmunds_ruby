@@ -8,21 +8,21 @@ module Edmunds
     end
 
     def find_distinct_year_with_new
-      @url = "/modelyearrepository/finddistinctyearwithnew&"
+      @url = "/modelyearrepository/finddistinctyearwithnew?"
       call_api
-      @json["modelYearHolder"]
+      @json
     end
 
     def find_distinct_year_with_new_or_used
-      @url = "/modelyearrepository/finddistinctyearwithneworused&"
+      @url = "/modelyearrepository/finddistinctyearwithneworused?"
       call_api
-      @json["modelYearHolder"]
+      @json
     end
 
     def find_distinct_year_with_used
-      @url = "/modelyearrepository/finddistinctyearwithused&"
+      @url = "/modelyearrepository/finddistinctyearwithused?"
       call_api
-      @json["modelYearHolder"]
+      @json
     end
 
     def find_future_model_years_by_model_id(model_id)
@@ -64,7 +64,7 @@ module Edmunds
     def find_years_by_category_and_publication_state(category, state)
       @url = "/modelyearrepository/findyearsbycategoryandpublicationstate?category=#{category}&state=#{state}&"
       call_api
-      @json["modelYearHolder"]
+      @json
     end
 
     def for_model_id(model_id)
