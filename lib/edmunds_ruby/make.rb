@@ -1,13 +1,13 @@
 module EdmundsRuby
   class Make < API
     # Makes
-    def find_all_makes
+    def find_all
       @url = "/makerepository/findall?"
       call_api
       @json["makeHolder"]
     end
 
-    def find_make_by_id(make_id)
+    def find_by_id(make_id)
       @url = "/makerepository/findbyid?id=#{make_id}&"
       call_api
       @json["makeHolder"]
