@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class ModelYear < API
 
     def find_by_id(id)

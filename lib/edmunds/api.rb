@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class API
     # Using this model requires setting your Edmunds API key in your ~/.bashrc file like so:
     # export EDMUNDS_VEHICLE="your_api_key_here"

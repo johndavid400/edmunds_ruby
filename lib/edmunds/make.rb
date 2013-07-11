@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class Make < API
     # Makes
     def find_all

@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class Model < API
 
     # models

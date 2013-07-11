@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class Photo < API
     # get an array of images available from this style id
     def find_by_style_id(style_id)

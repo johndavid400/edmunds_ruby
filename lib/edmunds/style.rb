@@ -1,4 +1,4 @@
-module EdmundsRuby
+module Edmunds
   class Style < API
 
     def find_by_id(style_id)

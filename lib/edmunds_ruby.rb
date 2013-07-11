@@ -1,7 +1,7 @@
-require 'edmunds_ruby/api'
-require 'edmunds_ruby/photo'
-require 'edmunds_ruby/make'
-require 'edmunds_ruby/model'
-require 'edmunds_ruby/model_year'
-require 'edmunds_ruby/style'
+require 'edmunds/api'
+require 'edmunds/photo'
+require 'edmunds/make'
+require 'edmunds/model'
+require 'edmunds/model_year'
+require 'edmunds/style'
 
