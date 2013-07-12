@@ -1,8 +1,7 @@
-## Ruby wrapper for the Edmunds auto api
+## Ruby wrapper for the Edmunds Vehicle API (V1)
 
 This API wrapper will allow you to make calls to the Edmunds Vehicle API to get detailed information about nearly any make, model, and style (trim).
 You can also get production images for each vehicle.
-
 
 ## Setup:
 
