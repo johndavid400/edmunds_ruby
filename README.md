@@ -87,7 +87,7 @@ While I plan on wrapping the entire Vehicle API, I currently only have the Make,
 
 #### Edmunds::Make.new
 
-    http://developer.edmunds.com/docs/read/the_vehicle_api/Make_Repository
+http://developer.edmunds.com/docs/read/the_vehicle_api/Make_Repository
 
     find_all                                          # Get the list of all makes and their all their models
     find_by_id(make_id)                               # Find a make and its models by providing a make ID
@@ -102,7 +102,7 @@ While I plan on wrapping the entire Vehicle API, I currently only have the Make,
 
 #### Edmunds::Model.new
 
-    http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
+http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
 
     find_by_id(model_id)                                   # Get a vehicle's model details by the model ID
     find_by_make_id(make_id)                               # Get a vehicle's model details by the make ID
@@ -117,7 +117,7 @@ While I plan on wrapping the entire Vehicle API, I currently only have the Make,
 
 #### Edmunds::ModelYear.new
 
-    http://developer.edmunds.com/docs/read/the_vehicle_api/Year_Repository
+http://developer.edmunds.com/docs/read/the_vehicle_api/Year_Repository
 
     find_by_id(model_year_id)                                        # Get details on a specifc vehicle by its model year ID
     find_distinct_year_with_new                                      # Get a list of years under which there are new vehicle listings
@@ -135,7 +135,7 @@ While I plan on wrapping the entire Vehicle API, I currently only have the Make,
 
 #### Edmunds::Style.new
 
-    http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
+http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
 
     find_by_id(style_id)                              # Get a style details by the style ID
     find_styles_by_make_model_year(make, model, year) # Get a list of styles by make, model and year
@@ -143,7 +143,7 @@ While I plan on wrapping the entire Vehicle API, I currently only have the Make,
 
 #### Edmunds::Photo.new
 
-    http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
+http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
 
     find_photos_by_style_id(style_id)                 # Get an array of photo detail objects for a particular vehicle style
 
