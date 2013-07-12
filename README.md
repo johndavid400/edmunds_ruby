@@ -27,7 +27,7 @@ You will need to create an account with Edmunds and get a free developer Vehicle
 
 Once you get your API key, either create an initializer file to place it in OR add it to your .bashrc script
 
-#### method 1 - put api key in an initializer file:
+#### option 1 - put api key in an initializer file:
 
 Create a new file in config/initializers called edmunds.rb, like so:
 
@@ -40,7 +40,7 @@ Add this line, with your api key:
 Save the file and exit.
 
 
-#### method 2 - put api key in your .bashrc script:
+#### option 2 - put api key in your .bashrc script:
 
 Open .bashrc file:
 
@@ -55,6 +55,14 @@ Save and close the file, then source the file to make the changes take effect:
     source ~/.bashrc
 
 Now you can use the Vehicle API as you like.
+
+### Verify API key:
+
+Open a console and try this:
+
+    Edmunds::API.new.api_key
+
+You should see your API key returned... if not, go back to the above steps and verify that you have it in an initializer or your bashrc script as described.
 
 
 ## Usage:
