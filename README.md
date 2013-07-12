@@ -77,7 +77,17 @@ For the Model class, you will have to provide an id first (which you can get fro
 
 ## Here is a complete list of available methods:
 
+The method descriptions were pulled from the Edmunds API documentation.
+
+    http://developer.edmunds.com/docs/read/Home
+
+The method names in this wrapper were kept as close to the original Edmunds API method names as possible, to avoid confusion.
+
+While I plan on wrapping the entire Vehicle API, I currently only have the Make, Model, ModelYear, Style, and Photo methods covered.
+
 #### Edmunds::Make.new
+
+    http://developer.edmunds.com/docs/read/the_vehicle_api/Make_Repository
 
     find_all                                          # Get the list of all makes and their all their models
     find_by_id(make_id)                               # Find a make and its models by providing a make ID
@@ -92,6 +102,8 @@ For the Model class, you will have to provide an id first (which you can get fro
 
 #### Edmunds::Model.new
 
+    http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
+
     find_by_id(model_id)                                   # Get a vehicle's model details by the model ID
     find_by_make_id(make_id)                               # Get a vehicle's model details by the make ID
     find_future_models_by_make_id(make_id)                 # Get a list of all future models by the make ID
@@ -104,6 +116,8 @@ For the Model class, you will have to provide an id first (which you can get fro
     find_used_models_by_make_id(make_id)                   # Get a list of used models by the make ID
 
 #### Edmunds::ModelYear.new
+
+    http://developer.edmunds.com/docs/read/the_vehicle_api/Year_Repository
 
     find_by_id(model_year_id)                                        # Get details on a specifc vehicle by its model year ID
     find_distinct_year_with_new                                      # Get a list of years under which there are new vehicle listings
@@ -121,11 +135,15 @@ For the Model class, you will have to provide an id first (which you can get fro
 
 #### Edmunds::Style.new
 
+    http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
+
     find_by_id(style_id)                              # Get a style details by the style ID
     find_styles_by_make_model_year(make, model, year) # Get a list of styles by make, model and year
     find_styles_by_model_year_id(model_year_id)       # Get a list of styles by model year ID
 
 #### Edmunds::Photo.new
+
+    http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
 
     find_photos_by_style_id(style_id)                 # Get an array of photo detail objects for a particular vehicle style
 
