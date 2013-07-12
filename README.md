@@ -144,7 +144,26 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
 
 http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
 
-    find_photos_by_style_id(style_id)                 # Get an array of photo detail objects for a particular vehicle style
+    find_photos_by_style_id(style_id)        # Get an array of photo detail objects for a particular vehicle style
+    find_sample_by_style_id(style_id)        # Get a sample photo url for a particular vehicle style - tries to get a exterior front view image if available.
+
+Note that the image arrays returned by the find_photos_by_style_id() method return an array of image links that will still need the base url attached to them in order to view the image.
+
+The image base url can be accessed from any of the classes, for instance these all return the same image base url:
+
+    Edmunds::API.new.image_base_url
+    Edmunds::Make.new.image_base_url
+    Edmunds::Photo.new.image_base_url
+
+or if you set the new instance to a variable:
+
+    p = Edmunds::Photo.new
+    p.image_base_url
+
+Will both return the base url (url prefix) that must be prepended to the links returned by the Photo API method.
+
+With this in mind, I added that last photo method to grab a sample url for an image of any style, then go ahead and add the image base url to the beginning, thus making a valid url that you can click on to see the image... it is not listed as an Edmunds API method, but I found it useful.
+
 
 More documentation on the way...
 
