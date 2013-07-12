@@ -4,7 +4,7 @@ module Edmunds
     # get an array of images available from this style id
     def find_by_style_id(style_id)
       @url = "photo/service/findphotosbystyleid?styleId=#{style_id}&"
-      call_api
+      call_photo_api
       @json
     end
 
@@ -12,10 +12,17 @@ module Edmunds
     # if no sample is found, just return the entire array.
     def find_sample_by_style_id(style_id)
       @url = "photo/service/findphotosbystyleid?styleId=#{style_id}&"
-      call_api
+      call_photo_api
       @image = @image_base_url + @json.select{|s| s["subType"] == "exterior" && s["shotTypeAbbreviation"] == "FQ" }.first["photoSrcs"].select{|s| s.match(/\d{3}(.jpg)/) }.max
     rescue
       @json
+    end
+
+    private
+
+    def call_photo_api
+      @base = "http://api.edmunds.com/v1/api/vehicle"
+      call_api
     end
 
   end
