@@ -80,13 +80,13 @@ For the Model class, you will have to provide an id first (which you can get fro
 #### Edmunds::Make.new
 
     find_all                                          # Get the list of all makes and their all their models
-    find_by_id                                        # Find a make and its models by providing a make ID
+    find_by_id(make_id)                               # Find a make and its models by providing a make ID
     find_future_makes                                 # Find all future makes and their models
-    find_make_by_name                                 # Find a make details by its name
-    find_makes_by_model_year                          # Find a make by a year
-    find_makes_by_publication_state                   # Find makes by their state (new or used)
+    find_make_by_name(name)                           # Find a make details by its name
+    find_makes_by_model_year(model_year)              # Find a make by a year
+    find_makes_by_publication_state(state)            # Find makes by their state (new or used)
     find_new_and_used                                 # Find all new and used makes
-    find_new_and_used_makes_by_model_year             # Find all new and used makes for a particular year
+    find_new_and_used_makes_by_model_year(model_year) # Find all new and used makes for a particular year
     find_new_makes                                    # Find only new makes
     find_used_makes                                   # Find only old makes
 
