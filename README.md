@@ -152,7 +152,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
 
 http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
 
-    find_photos_by_style_id(style_id)        # Get an array of photo detail objects for a particular vehicle style
+    find_by_style_id(style_id)        # Get an array of photo detail objects for a particular vehicle style
     find_sample_by_style_id(style_id)        # Get a sample photo url for a particular vehicle style - tries to get a exterior front view image if available.
 
 Note that the image arrays returned by the find_photos_by_style_id() method return an array of image links that will still need the base url attached to them in order to view the image.
