@@ -3,6 +3,14 @@
 This API wrapper will allow you to make calls to the Edmunds Vehicle API to get detailed information about nearly any make, model, and style (trim).
 You can also get production images for each vehicle.
 
+See a simple front-end demo using this gem:
+
+http://edmunds.herokuapp.com
+
+Code for frontend can be found here:
+
+https://github.com/johndavid400/vehicular
+
 ## Setup:
 
 First, include the gem in your Gemfile:
