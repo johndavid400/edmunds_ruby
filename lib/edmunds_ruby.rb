@@ -5,6 +5,8 @@ require 'edmunds/model'
 require 'edmunds/model_year'
 require 'edmunds/style'
 
+require 'edmunds/equipment'
+
 require 'edmunds/cost_to_own.rb'
 require 'edmunds/edmunds_ratings.rb'
 require 'edmunds/incentives.rb'
