@@ -4,7 +4,7 @@ module Edmunds
     # get an array of images available from this style id
     def find_by_style_id(style_id)
       @url = "photo/service/findphotosbystyleid?styleId=#{style_id}&"
-      call_api
+      call_photo_api
       @json
     end
 
@@ -29,7 +29,7 @@ module Edmunds
 
     def fetch_image_groups(style_id)
       @url = "photo/service/findphotosbystyleid?styleId=#{style_id}&"
-      call_api
+      call_photo_api
     end
 
     def select_group
@@ -56,6 +56,11 @@ module Edmunds
 
     def concatenate
       @image = @image_base_url + @sample
+    end
+
+    def call_photo_api
+      @base = "http://api.edmunds.com/v1/api/vehicle"
+      call_api
     end
 
   end
