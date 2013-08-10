@@ -151,6 +151,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
 #### Edmunds::Equipment.new
 
 Documentation for these methods was derived from the API console page:
+
 http://developer.edmunds.com/io-docs
 
     find_engines_by_style_id(style_id)         # Get engine details by the style ID (includes Horsepower)
