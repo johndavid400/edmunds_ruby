@@ -148,6 +148,14 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
     find_styles_by_make_model_year(make, model, year) # Get a list of styles by make, model and year
     find_styles_by_model_year_id(model_year_id)       # Get a list of styles by model year ID
 
+#### Edmunds::Equipment.new
+
+Documentation for these methods was derived from the API console page:
+http://developer.edmunds.com/io-docs
+
+    find_engines_by_style_id(style_id)                # Get engine details by the style ID (includes Horsepower)
+    find_transmissions_by_style_id(style_id)          # Get transmission details by the style ID
+
 #### Edmunds::Photo.new
 
 http://developer.edmunds.com/docs/read/the_vehicle_api/Photos
