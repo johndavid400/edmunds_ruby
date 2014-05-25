@@ -11,6 +11,7 @@ require 'edmunds/reviews'
 
 require 'edmunds/stylev2'
 require 'edmunds/equipmentv2'
+require 'edmunds/modelv2'
 
 require 'edmunds/cost_to_own.rb'
 require 'edmunds/edmunds_ratings.rb'
