@@ -22,4 +22,5 @@ require 'edmunds/V2/model_year'
 require 'edmunds/V2/style'
 require 'edmunds/V2/equipment'
 require 'edmunds/V2/engine'
+require 'edmunds/V2/vin'
 
