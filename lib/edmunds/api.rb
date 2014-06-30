@@ -28,6 +28,12 @@ module Edmunds
       @resp = RestClient.get(@base_url)
       @json = Crack::JSON.parse(@resp)
     end
+
+    def call_v2_api
+      @base = "https://api.edmunds.com/api/vehicle/v2"
+      call_api
+    end
+
   end
 
 end
