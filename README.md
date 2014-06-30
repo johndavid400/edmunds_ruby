@@ -111,7 +111,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Make_Repository
     find_new_makes                                    # Find only new makes
     find_used_makes                                   # Find only old makes
 
-#### Edmunds::Make::V2.new (arguments with * are optional)
+#### Edmunds::V2::Make.new (arguments with * are optional)
 
     get_makes(state*, year*, view*)                      # Get the list of all makes
     get_details_by_name(name, state*, year*, view*)      # Get a make and its models by providing its name (ie: 'lexus')
@@ -132,7 +132,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
     find_new_models_by_make_id(make_id)                    # Get a list of new models by the make ID
     find_used_models_by_make_id(make_id)                   # Get a list of used models by the make ID
 
-#### Edmunds::Model::V2.new
+#### Edmunds::V2::Model.new
 
       get_models_by_make(make, state*, year*, view*, submodel*, category*)                     # Get models by vehicle make name
       get_details_by_make_and_model(make, model, state*, year*, view*, submodel*, category*)   # Get details by make and model names
@@ -156,7 +156,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Year_Repository
     for_model_id(model_id)                                           # Get a list of model years by the model ID
     for_year_make_model(year, make, model)                           # Get a list of model years for a specific make, model and year
 
-#### Edmunds::ModelYear::V2.new
+#### Edmunds::V2::ModelYear.new
 
       get_model_years_by_make_model(make, model, state*, view*, submodel*, category*)       # Get model years by make and model name
       get_style_by_make_model_year(make, model, year, state*, view*, submodel*, category*)  # Get style details by make name and model year
@@ -170,7 +170,7 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
     find_styles_by_make_model_year(make, model, year) # Get a list of styles by make, model and year
     find_styles_by_model_year_id(model_year_id)       # Get a list of styles by model year ID
 
-#### Edmunds::Style::V2.new
+#### Edmunds::V2::Style.new
 
       get_style_by_style_id(style_id, view*)                                                 # Get style by Edmunds style id
       get_style_by_make_model_year(make, model, year, state*, view*, submodel*, category*)   # Get style by make, model, and year

@@ -16,6 +16,7 @@ require 'edmunds/market_value.rb'
 require 'edmunds/vehicle_ratings.rb'
 require 'edmunds/vin.rb'
 
+require 'edmunds/V2/V2'
 require 'edmunds/V2/make'
 require 'edmunds/V2/model'
 require 'edmunds/V2/model_year'
