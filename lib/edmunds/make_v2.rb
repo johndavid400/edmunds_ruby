@@ -2,13 +2,13 @@ module Edmunds
   class Make < API
     class V2 < Make
 
-      def find_all(state=nil, year=nil, view=nil)
+      def get_makes(state=nil, year=nil, view=nil)
         @url = "/makes?"
         set_options(state, year, view)
         call_make_api
       end
 
-      def find_by_name(name, state=nil, year=nil, view=nil)
+      def get_details_by_name(name, state=nil, year=nil, view=nil)
         @url = "/#{name}?"
         set_options(state, year, view)
         call_make_api
