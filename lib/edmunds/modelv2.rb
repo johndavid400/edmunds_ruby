@@ -1,17 +1,40 @@
-module Edmunds 
-	class ModelV2 < API
-    def find_models_by_make(make)
-      @base = 'https://api.edmunds.com/api/vehicle/v2'
-      @url = "/#{make}/models?&"
-      call_api
-      @json['models']
+module Edmunds
+  class Model < API
+
+    def find_models_by_make(make, state=nil, year=nil, view=nil, submodel=nil, category=nil)
+      @url = "/#{make}/models?"
+      set_options(state, year, view, submodel, category)
+      call_model_api
     end
 
-    def find_models_by_make_and_year(make, year)
-      @base = 'https://api.edmunds.com/api/vehicle/v2'
-      @url = "/#{make}/models?year=#{year}&"
-      call_api
-      @json['models']
+    def find_details_by_make_and_model(make, model, state=nil, year=nil, view=nil, submodel=nil, category=nil)
+      @url = "/#{make}/#{model}?"
+      set_options(state, year, view, submodel, category)
+      call_model_api
     end
-  end    
+
+    def get_count(make, state=nil, year=nil, view=nil, submodel=nil, category=nil)
+      @url = "/#{make}/models/count?"
+      set_options(state, year, view, submodel, category)
+      call_model_api
+    end
+
+    private
+
+    def set_options(state, year, view, submodel, category)
+      options = ""
+      options = options + "state=#{state}&" if state.present?
+      options = options + "view=#{view}&" if view.present?
+      options = options + "year=#{year}&" if year.present?
+      options = options + "submodel=#{submodel}&" if submodel.present?
+      options = options + "category=#{category}&" if category.present?
+      @url += options
+    end
+
+    def call_model_api
+      @base = "https://api.edmunds.com/api/vehicle/v2"
+      call_api
+    end
+
+  end
 end
