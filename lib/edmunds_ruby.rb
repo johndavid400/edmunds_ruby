@@ -6,13 +6,7 @@ require 'edmunds/model_year'
 require 'edmunds/style'
 
 require 'edmunds/equipment'
-
 require 'edmunds/reviews'
-
-require 'edmunds/stylev2'
-require 'edmunds/equipmentv2'
-require 'edmunds/modelv2'
-require 'edmunds/makev2'
 
 require 'edmunds/cost_to_own.rb'
 require 'edmunds/edmunds_ratings.rb'
@@ -21,3 +15,10 @@ require 'edmunds/maintenance.rb'
 require 'edmunds/market_value.rb'
 require 'edmunds/vehicle_ratings.rb'
 require 'edmunds/vin.rb'
+
+require 'edmunds/make_v2'
+require 'edmunds/model_v2'
+require 'edmunds/model_year_v2'
+require 'edmunds/style_v2'
+require 'edmunds/equipment_v2'
+
