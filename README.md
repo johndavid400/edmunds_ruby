@@ -1,4 +1,4 @@
-## Ruby wrapper for the Edmunds Vehicle API (V1)
+## Ruby wrapper for the Edmunds Vehicle API (V2)
 
 This API wrapper will allow you to make calls to the Edmunds Vehicle API to get detailed information about nearly any make, model, and style (trim).
 You can also get production images for each vehicle.
@@ -17,13 +17,9 @@ First, include the gem in your Gemfile:
 
     vim Gemfile
 
-    gem 'edmunds_ruby'
+    gem 'edmunds_ruby', :git => "https://github.com/johndavid400/edmunds_ruby.git", :branch => "v2"
 
     bundle
-
-Or if using from the console, just install the gem:
-
-    gem install 'edmunds_ruby'
 
 Now add your API key
 
@@ -115,6 +111,12 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Make_Repository
     find_new_makes                                    # Find only new makes
     find_used_makes                                   # Find only old makes
 
+#### Edmunds::Make::V2.new (arguments with * are optional)
+
+    get_makes(state*, year*, view*)                      # Get the list of all makes
+    get_details_by_name(name, state*, year*, view*)      # Get a make and its models by providing its name (ie: 'lexus')
+    get_count(state*, year*, view*)                      # Get count of all makes 
+
 #### Edmunds::Model.new
 
 http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
@@ -129,6 +131,12 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Model_Repository
     find_new_and_used_models_by_make_id(make_id)           # Get a list of new and used models by the make ID
     find_new_models_by_make_id(make_id)                    # Get a list of new models by the make ID
     find_used_models_by_make_id(make_id)                   # Get a list of used models by the make ID
+
+#### Edmunds::Model::V2.new
+
+      get_models_by_make(make, state*, year*, view*, submodel*, category*)                     # Get models by vehicle make name
+      get_details_by_make_and_model(make, model, state*, year*, view*, submodel*, category*)   # Get details by make and model names
+      get_count_by_make(make, state*, year*, view*, submodel*, category*)                      # Get model count by make name
 
 #### Edmunds::ModelYear.new
 
@@ -148,6 +156,12 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Year_Repository
     for_model_id(model_id)                                           # Get a list of model years by the model ID
     for_year_make_model(year, make, model)                           # Get a list of model years for a specific make, model and year
 
+#### Edmunds::ModelYear::V2.new
+
+      get_model_years_by_make_model(make, model, state*, view*, submodel*, category*)       # Get model years by make and model name
+      get_style_by_make_model_year(make, model, year, state*, view*, submodel*, category*)  # Get style details by make name and model year
+      get_count_by_make_model(make, model, state*, view*, submodel*, category*)             # Get count by make and model names
+
 #### Edmunds::Style.new
 
 http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
@@ -155,6 +169,16 @@ http://developer.edmunds.com/docs/read/the_vehicle_api/Style_Repository
     find_by_id(style_id)                              # Get a style details by the style ID
     find_styles_by_make_model_year(make, model, year) # Get a list of styles by make, model and year
     find_styles_by_model_year_id(model_year_id)       # Get a list of styles by model year ID
+
+#### Edmunds::Style::V2.new
+
+      get_style_by_style_id(style_id, view*)                                                 # Get style by Edmunds style id
+      get_style_by_make_model_year(make, model, year, state*, view*, submodel*, category*)   # Get style by make, model, and year
+      get_style_by_chrome_id(chrome_id)                                                      # Get style by Chrome ID
+      get_style_count(state*)                                                                # Get style count
+      get_style_count_by_make(make, state*)                                                  # Get style count by make
+      get_style_count_by_make_model(make, model, state*)                                     # Get style count by make and model
+      get_style_count_by_make_model_year(make, model, year, state*)                          # Get style count by make, model, and year
 
 #### Edmunds::Equipment.new
 
@@ -188,7 +212,6 @@ or if you set the new instance to a variable:
 Will both return the base url (url prefix) that must be prepended to the links returned by the Photo API method.
 
 With this in mind, I added that last photo method to grab a sample url for an image of any style, then go ahead and add the image base url to the beginning, thus making a valid url that you can click on to see the image... it is not listed as an Edmunds API method, but I found it useful.
-
 
 More documentation on the way...
 
