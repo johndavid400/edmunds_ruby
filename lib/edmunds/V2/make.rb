@@ -4,20 +4,17 @@ module Edmunds
 
         def get_makes(options={})
           @url = "/makes?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
         def get_details_by_name(name, options={})
           @url = "/#{name}?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
         def get_count(options={})
           @url = "/makes/count?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
     end

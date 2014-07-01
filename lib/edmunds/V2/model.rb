@@ -4,20 +4,17 @@ module Edmunds
 
         def get_models_by_make(make, options={})
           @url = "/#{make}/models?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
         def get_details_by_make_and_model(make, model, options={})
           @url = "/#{make}/#{model}?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
         def get_count_by_make(make, options={})
           @url = "/#{make}/models/count?"
-          set_options(options)
-          call_v2_api
+          call_v2_api(options)
         end
 
     end
