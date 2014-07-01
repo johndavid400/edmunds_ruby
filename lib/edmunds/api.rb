@@ -15,7 +15,7 @@ module Edmunds
     end
 
     def set_key
-      if ENV["FEDMUNDS_VEHICLE"].present?
+      if ENV["EDMUNDS_VEHICLE"].present?
         @api_key = ENV["EDMUNDS_VEHICLE"]
       else
         @api_key = Rails.configuration.edmunds_vehicle_api_key

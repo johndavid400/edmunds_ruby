@@ -2,8 +2,8 @@ module Edmunds
   class V2 < API
     class Grade < V2
 
-      def get_grade_by_make_model_year(make, model, year, options={})
-        @url = "/grade/#{make}/#{model}/#{year}?"
+      def get_grade_by_make_model_year_submodel(make, model, year, submodel, options={})
+        @url = "/grade/#{make}/#{model}/#{year}?#{submodel}&"
         call_v2_api(options)
       end
 

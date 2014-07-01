@@ -25,5 +25,6 @@ require 'edmunds/V2/equipment'
 require 'edmunds/V2/engine'
 require 'edmunds/V2/vin'
 require 'edmunds/V2/rating'
-require 'edmunds/V2/grade'
+require 'edmunds/V2/option'
+#require 'edmunds/V2/grade'
 
