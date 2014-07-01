@@ -15,7 +15,11 @@ module Edmunds
     end
 
     def set_key
-      @api_key = ENV["EDMUNDS_VEHICLE"] || Rails.configuration.edmunds_vehicle_api_key
+      if ENV["FEDMUNDS_VEHICLE"].present?
+        @api_key = ENV["EDMUNDS_VEHICLE"]
+      else
+        @api_key = Rails.configuration.edmunds_vehicle_api_key
+      end
     rescue
       @errors = "You need to set your Edmunds Vehicle API key first"
       return false
