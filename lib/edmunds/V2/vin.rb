@@ -10,18 +10,10 @@ module Edmunds
       end
 
       class Decode < VIN
-        def get_details_by_vin(vin, manufacturer_code=nil)
+        def get_details_by_vin(vin, options={})
           @url = "/vins/#{squish_vin}?"
-          set_options(code)
+          set_options(options)
           call_v2_api
-        end
-
-        private
-
-        def set_options(code)
-          options = ""
-          options = options + "manufacturerCode=#{code}&" if code.present?
-          @url += options
         end
       end
 

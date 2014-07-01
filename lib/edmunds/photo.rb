@@ -1,16 +1,16 @@
 module Edmunds
   class Photo < API
 
-    # get an array of images available from this style id
     def find_by_style_id(style_id)
+      # get an array of images available from this style id
       @url = "photo/service/findphotosbystyleid?styleId=#{style_id}&"
       call_photo_api
       @json
     end
 
-    # get the array of images, then sample one image from the group of exterior and front quarter panel (FQ) shots, then go ahead and append the base url so you can view the image directly.
-    # if no sample is found, just return the entire array.
     def find_sample_by_style_id(style_id)
+      # get the array of images, then sample one image from the group of exterior and front quarter panel (FQ) shots, then go ahead and append the base url so you can view the image directly.
+      # if no sample is found, just return the entire array.
       if style_id.is_a?(Array)
         style_id.each do |id|
           fetch_image_groups(id)

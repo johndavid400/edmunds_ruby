@@ -2,8 +2,6 @@ module Edmunds
   class API
 
     require 'rest_client'
-    require 'crack'
-    require 'crack/json'
 
     attr_reader :base, :api_key, :image_base_url, :format, :base_url, :url
 
@@ -26,12 +24,7 @@ module Edmunds
     def call_api
       @base_url = @base + @url + @format
       @resp = RestClient.get(@base_url)
-      @json = Crack::JSON.parse(@resp)
-    end
-
-    def call_v2_api
-      @base = "https://api.edmunds.com/api/vehicle/v2"
-      call_api
+      @json = JSON.parse(@resp)
     end
 
   end
