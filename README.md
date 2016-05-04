@@ -94,7 +94,7 @@ For the Model class, you will have to provide an id first (which you can get fro
 
 The method descriptions were pulled from the Edmunds API documentation.
 
-    http://developer.edmunds.com/docs/read/Home
+    http://developer.edmunds.com/api-documentation/vehicle/
 
 The method names in this wrapper were kept as close to the original Edmunds API method names as possible, to avoid confusion.
 
@@ -197,5 +197,3 @@ More documentation on the way...
 Please open an issue on Github if you find a bug, and I will address it.
 
 If you have an improvement to submit, please fork the repo, add your code and send a pull request.
-
-
